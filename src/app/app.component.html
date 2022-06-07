@@ -1,4 +1,4 @@
-<form [formGroup]="myCourse">
+<!-- <form [formGroup]="myCourse">
     <ng-container formArrayName="myCourseLists">
         <h4>myCourseLists</h4>
         <div *ngFor="let c1 of myCourseLists?.controls; index as i" style="border: 1px solid red; margin: 10px;">
@@ -33,4 +33,42 @@
         </div>
     </ng-container>
     <pre>{{ myCourse.value | json }}</pre>
+</form> -->
+
+<form [formGroup]="formItems">
+    <ng-container formArrayName="items">
+        <div *ngFor="let c1 of items?.controls; index as i" style="border: 1px solid red; margin: 10px;">
+            <div>
+                #{{i+1}}
+                <button (click)="deleteForm(i)">delete</button>
+                <button (click)="studyYearsFn(i)">add studyYears</button>
+            </div>
+            <ng-container [formGroupName]="i">
+                eduSubLevel: <input type="text" formControlName="eduSubLevel">
+                status: <input type="text" formControlName="status">
+                <h5>studyYears</h5>
+                <ng-container formArrayName="studyYears">
+                    <div *ngFor="let c2 of studyYears(i)?.controls; index as j"
+                        style="border: 1px solid green; margin: 10px;">
+                        <ng-container [formGroupName]="j">
+                            classYearName: <input type="text" formControlName="classYearName">
+
+                            <ng-container formArrayName="studySemesters">
+                                <div *ngFor="let c2 of studySemesters(j)?.controls; index as k"
+                                    style="border: 1px solid blue; margin: 10px;">
+                                    <ng-container [formGroupName]="k">
+                                        tuitionFee: <input type="text" formControlName="tuitionFee">
+                                    </ng-container>
+                                </div>
+                            </ng-container>
+
+
+                        </ng-container>
+                    </div>
+                </ng-container>
+            </ng-container>
+        </div>
+    </ng-container>
 </form>
+<button (click)="addFormGroup()">Add FomGroup</button>
+<!-- <pre> {{ formItems.value | json }}</pre> -->

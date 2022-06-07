@@ -1,0 +1,276 @@
+{
+  "items": [
+    {
+      "eduSubLevel": "41",
+      "status": "Y",
+      "activeFlag": "Y",
+      "approveFlag": "N",
+      "academicYear": "2565",
+      "regularYear": 4,
+      "numberSemester": 3,
+      "numberStudent": 1000,
+      "enrolledStudent": 1000,
+      "totalEducationFee": 36,
+      "tuitionFeeType": "01",
+      "facultyCode": "00096",
+      "facultyName": "คณะศิลปศาสตร์",
+      "subjectFieldHigherEduCode": "00000",
+      "subjectFieldHigherEduName": "ไม่ระบุ (ในกรณีที่นักศึกษาเข้าใหม่ยังไม่ได้เลือกสาขาวิชา)",
+      "curriculumCode": "00000000000000-001",
+      "curriculumName": "ไม่ระบุ (ในกรณีที่นักศึกษาเข้าใหม่ยังไม่ได้เลือกสาขาวิชา)",
+      "courseTypeCode": "01",
+      "discription": "",
+      "studyYears": [
+        {
+          "studySemesters": [
+            {
+              "semester": 1,
+              "relatedFee": 2,
+              "tuitionFee": 1
+            },
+            {
+              "semester": 2,
+              "relatedFee": 2,
+              "tuitionFee": 1
+            },
+            {
+              "semester": 3,
+              "relatedFee": 2,
+              "tuitionFee": 1
+            }
+          ],
+          "classYearCode": "Y1",
+          "classYearName": "ชั้นปีที่ 1"
+        },
+        {
+          "studySemesters": [
+            {
+              "semester": 1,
+              "relatedFee": 2,
+              "tuitionFee": 1
+            },
+            {
+              "semester": 2,
+              "relatedFee": 2,
+              "tuitionFee": 1
+            },
+            {
+              "semester": 3,
+              "relatedFee": 2,
+              "tuitionFee": 1
+            }
+          ],
+          "classYearCode": "Y2",
+          "classYearName": "ชั้นปีที่ 2"
+        },
+        {
+          "studySemesters": [
+            {
+              "semester": 1,
+              "relatedFee": 2,
+              "tuitionFee": 1
+            },
+            {
+              "semester": 2,
+              "relatedFee": 2,
+              "tuitionFee": 1
+            },
+            {
+              "semester": 3,
+              "relatedFee": 2,
+              "tuitionFee": 1
+            }
+          ],
+          "classYearCode": "Y3",
+          "classYearName": "ชั้นปีที่ 3"
+        },
+        {
+          "studySemesters": [
+            {
+              "semester": 1,
+              "relatedFee": 2,
+              "tuitionFee": 1
+            },
+            {
+              "semester": 2,
+              "relatedFee": 2,
+              "tuitionFee": 1
+            },
+            {
+              "semester": 3,
+              "relatedFee": 2,
+              "tuitionFee": 1
+            }
+          ],
+          "classYearCode": "Y4",
+          "classYearName": "ชั้นปีที่ 4"
+        }
+      ]
+    },
+    {
+      "eduSubLevel": "41",
+      "status": "Y",
+      "activeFlag": "Y",
+      "approveFlag": "N",
+      "academicYear": "2565",
+      "regularYear": 4,
+      "numberSemester": 3,
+      "numberStudent": 1000,
+      "enrolledStudent": 1000,
+      "totalEducationFee": 36,
+      "tuitionFeeType": "01",
+      "facultyCode": "00096",
+      "facultyName": "คณะศิลปศาสตร์",
+      "subjectFieldHigherEduCode": "00000",
+      "subjectFieldHigherEduName": "ไม่ระบุ (ในกรณีที่นักศึกษาเข้าใหม่ยังไม่ได้เลือกสาขาวิชา)",
+      "curriculumCode": "00000000000000-001",
+      "curriculumName": "ไม่ระบุ (ในกรณีที่นักศึกษาเข้าใหม่ยังไม่ได้เลือกสาขาวิชา)",
+      "courseTypeCode": "02",
+      "discription": "พิเศษโควิด",
+      "studyYears": [
+        {
+          "studySemesters": [
+            {
+              "semester": 1,
+              "relatedFee": 2,
+              "tuitionFee": 1
+            },
+            {
+              "semester": 2,
+              "relatedFee": 2,
+              "tuitionFee": 1
+            },
+            {
+              "semester": 3,
+              "relatedFee": 2,
+              "tuitionFee": 1
+            }
+          ],
+          "classYearCode": "Y1",
+          "classYearName": "ชั้นปีที่ 1"
+        },
+        {
+          "studySemesters": [
+            {
+              "semester": 1,
+              "relatedFee": 2,
+              "tuitionFee": 1
+            },
+            {
+              "semester": 2,
+              "relatedFee": 2,
+              "tuitionFee": 1
+            },
+            {
+              "semester": 3,
+              "relatedFee": 2,
+              "tuitionFee": 1
+            }
+          ],
+          "classYearCode": "Y2",
+          "classYearName": "ชั้นปีที่ 2"
+        },
+        {
+          "studySemesters": [
+            {
+              "semester": 1,
+              "relatedFee": 2,
+              "tuitionFee": 1
+            },
+            {
+              "semester": 2,
+              "relatedFee": 2,
+              "tuitionFee": 1
+            },
+            {
+              "semester": 3,
+              "relatedFee": 2,
+              "tuitionFee": 1
+            }
+          ],
+          "classYearCode": "Y3",
+          "classYearName": "ชั้นปีที่ 3"
+        },
+        {
+          "studySemesters": [
+            {
+              "semester": 1,
+              "relatedFee": 2,
+              "tuitionFee": 1
+            },
+            {
+              "semester": 2,
+              "relatedFee": 2,
+              "tuitionFee": 1
+            },
+            {
+              "semester": 3,
+              "relatedFee": 2,
+              "tuitionFee": 1
+            }
+          ],
+          "classYearCode": "Y4",
+          "classYearName": "ชั้นปีที่ 4"
+        }
+      ]
+    }
+  ],
+  "approvalHistory": [
+    {
+      "submitDate": "2022-06-06 11:48:37",
+      "submitAction": "CANCEL",
+      "submitActionName": "ยกเลิก",
+      "reason": "test bird",
+      "createdBy": "4610161754519",
+      "createdByName": "นายจิรายุ กรสูต",
+      "roleName": "ผู้ตรวจสอบรายการสถานศึกษา",
+      "createdDate": "2022-06-06 11:48:37"
+    },
+    {
+      "submitDate": "2022-06-06 11:47:39",
+      "submitAction": "APPROVE",
+      "submitActionName": "อนุมัติ",
+      "createdBy": "4610161754519",
+      "createdByName": "นายจิรายุ กรสูต",
+      "roleName": "ผู้ตรวจสอบรายการสถานศึกษา",
+      "createdDate": "2022-06-06 11:47:39"
+    },
+    {
+      "submitDate": "2022-06-06 11:44:48",
+      "submitAction": "SUBMIT",
+      "submitActionName": "ยืนยัน",
+      "createdBy": "5246613723150",
+      "createdByName": "นายพิชชาภา ศรีฤกษ์",
+      "roleName": "ผู้ทำรายการสถานศึกษา",
+      "createdDate": "2022-06-06 11:44:48"
+    },
+    {
+      "submitDate": "2022-05-30 16:17:12",
+      "submitAction": "CANCEL",
+      "submitActionName": "ยกเลิก",
+      "reason": "test",
+      "createdBy": "4610161754519",
+      "createdByName": "นายจิรายุ กรสูต",
+      "roleName": "ผู้ตรวจสอบรายการสถานศึกษา",
+      "createdDate": "2022-05-30 16:17:12"
+    },
+    {
+      "submitDate": "2022-05-30 15:59:31",
+      "submitAction": "APPROVE",
+      "submitActionName": "อนุมัติ",
+      "createdBy": "4610161754519",
+      "createdByName": "นายจิรายุ กรสูต",
+      "roleName": "ผู้ตรวจสอบรายการสถานศึกษา",
+      "createdDate": "2022-05-30 15:59:31"
+    },
+    {
+      "submitDate": "2022-05-30 15:59:06",
+      "submitAction": "SUBMIT",
+      "submitActionName": "ยืนยัน",
+      "createdBy": "5246613723150",
+      "createdByName": "นายพิชชาภา ศรีฤกษ์",
+      "roleName": "ผู้ทำรายการสถานศึกษา",
+      "createdDate": "2022-05-30 15:59:06"
+    }
+  ]
+}
