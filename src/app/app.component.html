@@ -41,34 +41,37 @@
             <div>
                 #{{i+1}}
                 <button (click)="deleteForm(i)">delete</button>
-                <button (click)="studyYearsFn(i)">add studyYears</button>
             </div>
             <ng-container [formGroupName]="i">
-                eduSubLevel: <input type="text" formControlName="eduSubLevel">
-                status: <input type="text" formControlName="status">
+                eduSubLevel: <input type="text" formControlName="eduSubLevel"><br />
+                regularYear: <input type="text" formControlName="regularYear"><br />
+                numberSemester: <input type="text" formControlName="numberSemester"><br />
                 <h5>studyYears</h5>
                 <ng-container formArrayName="studyYears">
                     <div *ngFor="let c2 of studyYears(i)?.controls; index as j"
                         style="border: 1px solid green; margin: 10px;">
                         <ng-container [formGroupName]="j">
-                            classYearName: <input type="text" formControlName="classYearName">
+                            #{{j+1}} classYearName: <input type="text" formControlName="classYearName">
 
                             <ng-container formArrayName="studySemesters">
-                                <div *ngFor="let c2 of studySemesters(j)?.controls; index as k"
+                                <div *ngFor="let c3 of studySemesters(i,j)?.controls; index as k"
                                     style="border: 1px solid blue; margin: 10px;">
                                     <ng-container [formGroupName]="k">
-                                        tuitionFee: <input type="text" formControlName="tuitionFee">
+                                        #{{k+1}}  tuitionFee: <input type="text" formControlName="tuitionFee">
                                     </ng-container>
                                 </div>
                             </ng-container>
-
+                            <button (click)="delStudyYearsFn(i,j)">del StudyYear</button>
 
                         </ng-container>
+                      
                     </div>
+                    <button (click)="studyYearsFn(i)">add studyYears</button>
                 </ng-container>
             </ng-container>
         </div>
     </ng-container>
 </form>
-<button (click)="addFormGroup()">Add FomGroup</button>
-<!-- <pre> {{ formItems.value | json }}</pre> -->
+<button *ngIf="formItems.get('items')?.value.length < 2" (click)="addFormGroup()">Add FomGroup</button>
+<!-- <pre> {{ itemsMock | json }}</pre> -->
+<pre> {{ formItems.value | json }}</pre>

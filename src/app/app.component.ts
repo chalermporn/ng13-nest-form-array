@@ -22,12 +22,30 @@ export class AppComponent {
     })
     this.buildFormItem()
 
+    if (this.itemsMock.length) {
+      this.itemsMock.forEach((v, i) => {
+        this.addFormGroup()
+        if (v?.studyYears.length) {
+          v?.studyYears.forEach((v2: any, j: number) => {
+            this.studyYearsFn(i);
+            if (v2?.studySemesters.length) {
+              v2?.studySemesters.forEach((v3: any, k: number) => {
+                this.studySemestersFn(i, j);
+              });
+            }
+          });
+        }
+      });
+    }
+
+    this.formItems.get('items')?.patchValue(this.itemsMock)
+
     console.log(this.itemsMock)
   }
 
   buildFormItem() {
     this.formItems = this.fb.group({
-      items: this.fb.array([this.addSingleForm()])
+      items: this.fb.array([])
     })
   }
 
@@ -39,50 +57,51 @@ export class AppComponent {
     const c1 = this.items?.at(index)
     return c1?.get('studyYears') as FormArray
   }
-  studySemesters(index: number): FormArray {
-    const c2 = this.studyYears(index)?.at(index)
+
+  studySemesters(i: number, j: number): FormArray {
+    const c2 = this.studyYears(i)?.at(j)
     return c2?.get('studySemesters') as FormArray
   }
 
 
   addSingleForm(): FormGroup {
     return this.fb.group({
-      eduSubLevel: ["41",],
-      status: ["Y",],
-      activeFlag: ["Y",],
-      approveFlag: ["N",],
-      academicYear: ["2565",],
-      regularYear: [4,],
-      numberSemester: [3,],
-      numberStudent: [1000],
-      enrolledStudent: [1000,],
-      totalEducationFee: [36,],
-      tuitionFeeType: ["01",],
-      facultyCode: ["00096",],
-      facultyName: ["คณะศิลปศาสตร์",],
-      subjectFieldHigherEduCode: ["00000",],
-      subjectFieldHigherEduName: ["ไม่ระบุ (ในกรณีที่นักศึกษาเข้าใหม่ยังไม่ได้เลือกสาขาวิชา)",],
-      curriculumCode: ["00000000000000-001",],
-      curriculumName: ["ไม่ระบุ (ในกรณีที่นักศึกษาเข้าใหม่ยังไม่ได้เลือกสาขาวิชา)",],
-      courseTypeCode: ["01",],
-      discription: [""],
-      studyYears: this.fb.array([this.addStudyYears(), this.addStudyYears()])
+      eduSubLevel: [],
+      status: [],
+      activeFlag: [],
+      approveFlag: [],
+      academicYear: [],
+      regularYear: [],
+      numberSemester: [],
+      numberStudent: [],
+      enrolledStudent: [],
+      totalEducationFee: [],
+      tuitionFeeType: [],
+      facultyCode: [],
+      facultyName: [],
+      subjectFieldHigherEduCode: [],
+      subjectFieldHigherEduName: [],
+      curriculumCode: [],
+      curriculumName: [],
+      courseTypeCode: [],
+      discription: [],
+      studyYears: this.fb.array([]),
     })
   }
 
   addStudyYears(): FormGroup {
     return this.fb.group({
-      studySemesters: this.fb.array([this.addStudySemesters(), this.addStudySemesters()]),
-      classYearCode: ["001"],
-      classYearName: ["Y3"]
+      studySemesters: this.fb.array([]),
+      classYearCode: [],
+      classYearName: []
     })
   }
 
   addStudySemesters() {
     return this.fb.group({
-      semester: [1],
-      relatedFee: [1],
-      tuitionFee: [1]
+      semester: [],
+      relatedFee: [],
+      tuitionFee: []
     })
   }
 
@@ -95,11 +114,25 @@ export class AppComponent {
     const form = this.formItems.get('items');
     (form as FormArray).removeAt(index)
   }
+  delStudyYearsFn(i: number, j: number) {
+    // const form = this.formItems.get('items');
+    // (form as FormArray).removeAt(index)
+    const f1 = this.items?.at(i)
+    const f2 = f1?.get('studyYears') as FormArray
+    f2?.removeAt(j)
+  }
 
   studyYearsFn(index: number) {
     const f1 = this.items?.at(index)
     const f2 = f1?.get('studyYears') as FormArray
     f2?.push(this.addStudyYears())
+
+  }
+  studySemestersFn(i: number, j: number) {
+    const f1 = this.items?.at(i)
+    const f2 = f1?.get('studyYears') as FormArray
+    const f3 = f2?.at(j)?.get('studySemesters') as FormArray
+    f3?.push(this.addStudySemesters())
 
   }
 
